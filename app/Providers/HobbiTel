@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Providers;
+
+class HobbiTel implements ValidationProvider extends CoR/AbstractHandler{
+    private $url = "url3";
+    private $http_method = "POST";
+
+    public function validate(){
+        if ($request === "HobbiTel") {
+            return "HobbiTel: {$request} |";
+        } else {
+            return parent::handle($request);
+        }
+    }
+
+}
