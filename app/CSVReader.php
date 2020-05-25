@@ -36,7 +36,7 @@ class CSVReader{
         if(count($ret) != 2) throw new Exception("Line #{$this->currentLine} does not follow the valid format [country,number]");
     }
         
-    private function __destruct(){
+    public function __destruct(){
         fclose($this->fileHandle);
     }
         
