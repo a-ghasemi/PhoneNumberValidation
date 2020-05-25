@@ -2,6 +2,7 @@
 namespace App;
 
 use \App\Providers\ValidationProvider;
+use App\Providers\ValidationProviderFactory;
 
 class Checker{
     private $result;

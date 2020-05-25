@@ -19,7 +19,7 @@ class Kernel{
         $list = $reader->read();
         foreach($list as $country => $item) {
           $checker->process($country, $item);
-          $logger->write_log($checker->result());
+          $logger->log($checker->result());
         }
     }
 }

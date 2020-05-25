@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\AbstractHandler;
+use App\Providers\CoR\AbstractHandler;
 
 class HobbiTel extends AbstractHandler {
     private $url = "url3";

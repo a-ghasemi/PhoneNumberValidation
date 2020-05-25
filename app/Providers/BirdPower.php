@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\AbstractHandler;
+use App\Providers\CoR\AbstractHandler;
 
 class BirdPower extends AbstractHandler {
     private $url = "url1/look?number=";

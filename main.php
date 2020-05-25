@@ -7,6 +7,6 @@
 
 require_once(__DIR__ . "/vendor/autoload.php");
 
-$kernel = new \App\Kernel(__DIR__ . '/list.txt',__DIR__ . '/result/log.txt');
+$kernel = new \App\Kernel(__DIR__ . '/list.txt',__DIR__ . '/results/log.txt');
 
 $kernel->main();
