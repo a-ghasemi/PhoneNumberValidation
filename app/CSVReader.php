@@ -5,16 +5,19 @@ class CSVReader{
     private $filePath;
     private $fileHandle;
     private $currentLine;
+    private $error_engine;
+
 
     public function __construct($filename){
         $this->filePath = $filename;
+        $this->error_engine = new ErrorThrower();
     }
 
     private function open(){
         $this->fileHandle = fopen($this->filePath, "r");
 
         if($this->fileHandle === false){
-            throw new Exception('Could not get list file handle');
+            $this->error_engine->error('Could not get list file handle');
         }
     }
         
@@ -33,7 +36,7 @@ class CSVReader{
 
     private function separate($item){
         $ret = explode(",",$item);
-        if(count($ret) != 2) throw new Exception("Line #{$this->currentLine} does not follow the valid format [country,number]");
+        if(count($ret) != 2) $this->error_engine->error("Line #{$this->currentLine} does not follow the valid format [country,number]");
     }
         
     public function __destruct(){
