@@ -20,22 +20,11 @@ class ComposerStaticInit58bcde8ec922acf5f7b48381313107e1
         ),
     );
 
-    public static $classMap = array (
-        'App\\CSVReader' => __DIR__ . '/../..' . '/app/CSVReader.php',
-        'App\\Checker' => __DIR__ . '/../..' . '/app/Checker.php',
-        'App\\Kernel' => __DIR__ . '/../..' . '/app/Kernel.php',
-        'App\\Logger' => __DIR__ . '/../..' . '/app/Logger.php',
-        'App\\Providers\\BirdPower' => __DIR__ . '/../..' . '/app/Providers/BirdPower.php',
-        'App\\Providers\\Twilight' => __DIR__ . '/../..' . '/app/Providers/Twilight.php',
-        'App\\Providers\\ValidationProvider' => __DIR__ . '/../..' . '/app/Providers/ValidationProvider.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit58bcde8ec922acf5f7b48381313107e1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit58bcde8ec922acf5f7b48381313107e1::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit58bcde8ec922acf5f7b48381313107e1::$classMap;
 
         }, null, ClassLoader::class);
     }

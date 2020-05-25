@@ -1,5 +1,5 @@
 <?php
-namespace App/Providers/CoR;
+namespace App\Providers\CoR;
 
 abstract class AbstractHandler implements Handler
 {

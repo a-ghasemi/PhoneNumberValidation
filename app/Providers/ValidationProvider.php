@@ -1,19 +1,8 @@
 <?php 
 namespace App\Providers;
 
-abstract class ValidationProvider{
-    private $url;
-    private $http_method;
+interface ValidationProvider{
 
-    public function validate()
-    {
-        while(!$this->check_timeout()){
-            //
-        }
-        return parent::handle($request);
-    }
+    public function validate();
 
-    private function check_timeout(){
-        return true;
-    }
 }

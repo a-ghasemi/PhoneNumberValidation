@@ -5,14 +5,13 @@ use \App\Providers\ValidationProvider;
 
 class Checker{
     private $result;
-    private ValidationProviderFactory;
 
-    public function process($country, $item){
+    public function process($country, $number){
         $this->validate($country, $number);
     }
 
     private function validate($country, $number){
-        $VP = ValidationProviderFactory.newValidationProvider($country);
+        $VP = ValidationProviderFactory::newValidationProvider($country);
     }
 
     public function result(){

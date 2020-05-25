@@ -1,6 +1,6 @@
 <?php
 
-namespace App/Providers/CoR;
+namespace App\Providers\CoR;
 
 interface Handler
 {

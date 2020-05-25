@@ -1,5 +1,10 @@
 {
     "name": "runner/phone-number-validation",
+    "config": {
+        "platform": {
+            "php": "^7.*"
+        }
+    },
     "require": {},
     "autoload":{
         "psr-4":{
